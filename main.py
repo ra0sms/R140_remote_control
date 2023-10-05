@@ -73,7 +73,7 @@ def show_warning_messagebox():
 
 def on_read():
     if not serial.canReadLine():
-        return     # выходим если нечего читать
+        return
     rx = serial.readLine()
     rxs = str(rx, 'utf-8').strip()
     data = rxs.split(',')
