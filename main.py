@@ -174,8 +174,223 @@ def on_on():
         show_warning_messagebox()
 
 
+def on_firstB():
+    if serial.isOpen():
+        check_out_list[0] = "1"
+        check_out_list[1] = "0"
+        check_out_list[2] = "0"
+        check_out_list[3] = "0"
+        check_out_list[4] = "0"
+        check_out_list[5] = "0"
+        check_out_list[6] = "0"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : red")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def on_secondB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "1"
+        check_out_list[2] = "0"
+        check_out_list[3] = "0"
+        check_out_list[4] = "0"
+        check_out_list[5] = "0"
+        check_out_list[6] = "0"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : red")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+def on_thirdB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "0"
+        check_out_list[2] = "1"
+        check_out_list[3] = "0"
+        check_out_list[4] = "0"
+        check_out_list[5] = "0"
+        check_out_list[6] = "0"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : red")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+def on_fourthB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "0"
+        check_out_list[2] = "0"
+        check_out_list[3] = "1"
+        check_out_list[4] = "0"
+        check_out_list[5] = "0"
+        check_out_list[6] = "0"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : red")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def on_fifthB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "0"
+        check_out_list[2] = "0"
+        check_out_list[3] = "0"
+        check_out_list[4] = "1"
+        check_out_list[5] = "0"
+        check_out_list[6] = "0"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : red")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def on_sixthB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "0"
+        check_out_list[2] = "0"
+        check_out_list[3] = "0"
+        check_out_list[4] = "0"
+        check_out_list[5] = "1"
+        check_out_list[6] = "0"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : red")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def on_seventhB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "0"
+        check_out_list[2] = "0"
+        check_out_list[3] = "0"
+        check_out_list[4] = "0"
+        check_out_list[5] = "0"
+        check_out_list[6] = "1"
+        check_out_list[7] = "0"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : red")
+        ui.eighthB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def on_eightB():
+    if serial.isOpen():
+        check_out_list[0] = "0"
+        check_out_list[1] = "0"
+        check_out_list[2] = "0"
+        check_out_list[3] = "0"
+        check_out_list[4] = "0"
+        check_out_list[5] = "0"
+        check_out_list[6] = "0"
+        check_out_list[7] = "1"
+        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.secondB.setStyleSheet("background-color : gray window")
+        ui.thirdB.setStyleSheet("background-color : gray window")
+        ui.fourthB.setStyleSheet("background-color : gray window")
+        ui.fifthB.setStyleSheet("background-color : gray window")
+        ui.sixthB.setStyleSheet("background-color : gray window")
+        ui.seventhB.setStyleSheet("background-color : gray window")
+        ui.eighthB.setStyleSheet("background-color : red")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def reset_start():
+    ui.startB.setStyleSheet("background-color : gray window")
+    check_out_list[12] = "0"
+    set_output()
+
+
+def on_startB():
+    if serial.isOpen():
+        check_out_list[12] = "1"
+        ui.startB.setStyleSheet("background-color : red")
+        set_output()
+        timer.singleShot(1200, reset_start)
+    else:
+        show_warning_messagebox()
+
+
+def on_stbOnB():
+    if serial.isOpen():
+        check_out_list[11] = "1"
+        ui.stbOnB.setStyleSheet("background-color : red")
+        set_output()
+    else:
+        show_warning_messagebox()
+
+
+def on_stbOffB():
+    if serial.isOpen():
+        check_out_list[11] = "0"
+        ui.stbOnB.setStyleSheet("background-color : gray window")
+        set_output()
+    else:
+        show_warning_messagebox()
+
 set_output()
-serial.readyRead.connect(on_read)
+serial.readyRead.connect(on_read)   # reading from COM port routine
 ui.onB.setDisabled(True)            # disabled button at start
 ui.stbB.setDisabled(True)           # disabled button at start
 ui.OpenB.clicked.connect(on_open)
@@ -183,6 +398,17 @@ ui.offB.clicked.connect(on_off)
 ui.fanB.clicked.connect(on_fan)
 ui.stbB.clicked.connect(on_stb)
 ui.onB.clicked.connect(on_on)
+ui.firstB.clicked.connect(on_firstB)
+ui.secondB.clicked.connect(on_secondB)
+ui.thirdB.clicked.connect(on_thirdB)
+ui.fourthB.clicked.connect(on_fourthB)
+ui.fifthB.clicked.connect(on_fifthB)
+ui.sixthB.clicked.connect(on_sixthB)
+ui.seventhB.clicked.connect(on_seventhB)
+ui.eighthB.clicked.connect(on_eightB)
+ui.startB.clicked.connect(on_startB)
+ui.stbOnB.clicked.connect(on_stbOnB)
+ui.stbOffB.clicked.connect(on_stbOffB)
 
 
 ui.show()
