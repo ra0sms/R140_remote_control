@@ -1,5 +1,7 @@
 ## Remote control console for Power amplifier based on R-140 (ПЖ-3, ПЖ-6)
 
+You can read about this device here - https://ra0sms.com/remote-r140/
+
 ### Installation
 
 #### Linux
