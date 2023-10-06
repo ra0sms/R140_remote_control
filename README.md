@@ -22,4 +22,4 @@ pip install pyqt5
 
 #### Windows
 
-Copy `main_desigh.ui`, `logo.png` and `R140_Remote_control.exe` to your PC. Enjoy!
+Copy `main_desigh.ui`, `logo.png` and `R140_remote_control.exe` to your PC. Enjoy!
