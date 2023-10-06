@@ -295,7 +295,7 @@
       <x>10</x>
       <y>170</y>
       <width>77</width>
-      <height>116</height>
+      <height>118</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -317,6 +317,9 @@
         <font>
          <pointsize>10</pointsize>
         </font>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
         <string>STB</string>
@@ -348,6 +351,25 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>10</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Open-source-hardware-logo.svg.ico</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
