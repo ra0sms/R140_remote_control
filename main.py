@@ -1,12 +1,13 @@
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
-from PyQt5.QtCore import QIODevice,QTimer
+from PyQt5.QtCore import QIODevice,QTimer, QEvent
 from PyQt5.QtWidgets import QMessageBox
-
 
 app = QtWidgets.QApplication([])
 ui = uic.loadUi("main_design.ui")
 ui.setWindowTitle("R-140 Remote Control")
+ui.setWindowIcon(QtGui.QIcon("logo.png"))
+ui.closeEvent(QEvent.accept)
 
 
 serial = QSerialPort()
@@ -18,21 +19,12 @@ for port in ports:
     portList.append(port.portName())
 ui.comL.addItems(portList)
 
-TIME_INTERVAL = 3000    # msec between button ON enabled
+
+TIME_INTERVAL = 120000    # msec between button ON enabled
 all_out_off = "AM10000000000000000\r"
 check_out_list = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
 header = "AM1"
 is_push_on_btn = 0
-
-
-posX = 200
-posY = 100
-listX = []
-for x in range(100):
-    listX.append(x)
-listY = []
-for x in range(100):
-    listY.append(0)
 
 
 def set_output():
@@ -367,7 +359,7 @@ def on_startB():
         check_out_list[12] = "1"
         ui.startB.setStyleSheet("background-color : red")
         set_output()
-        timer.singleShot(1200, reset_start)
+        timer.singleShot(800, reset_start)
     else:
         show_warning_messagebox()
 
@@ -389,6 +381,7 @@ def on_stbOffB():
     else:
         show_warning_messagebox()
 
+
 set_output()
 serial.readyRead.connect(on_read)   # reading from COM port routine
 ui.onB.setDisabled(True)            # disabled button at start
@@ -409,6 +402,7 @@ ui.eighthB.clicked.connect(on_eightB)
 ui.startB.clicked.connect(on_startB)
 ui.stbOnB.clicked.connect(on_stbOnB)
 ui.stbOffB.clicked.connect(on_stbOffB)
+
 
 
 ui.show()
