@@ -1,13 +1,14 @@
+import PyQt5.QtWidgets
 from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
-from PyQt5.QtCore import QIODevice,QTimer, QEvent
-from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import QIODevice, QTimer, QEvent
+from PyQt5.QtWidgets import QMessageBox, QWidget
+
 
 app = QtWidgets.QApplication([])
 ui = uic.loadUi("main_design.ui")
 ui.setWindowTitle("R-140 Remote Control")
 ui.setWindowIcon(QtGui.QIcon("logo.png"))
-ui.closeEvent(QEvent.accept)
 
 
 serial = QSerialPort()
@@ -20,7 +21,7 @@ for port in ports:
 ui.comL.addItems(portList)
 
 
-TIME_INTERVAL = 120000    # msec between button ON enabled
+TIME_INTERVAL = 100000    # msec between button ON enabled
 all_out_off = "AM10000000000000000\r"
 check_out_list = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
 header = "AM1"
@@ -98,6 +99,7 @@ def on_off():
         ui.stbB.setStyleSheet("background-color : gray window")
         ui.onB.setStyleSheet("background-color : gray window")
         ui.offB.setStyleSheet("background-color : gray window")
+        ui.onB.setDisabled(True)
     else:
         show_warning_messagebox()
 
@@ -113,6 +115,7 @@ def on_fan():
         ui.onB.setStyleSheet("background-color : gray window")
         ui.offB.setStyleSheet("background-color : gray window")
         ui.stbB.setEnabled(True)
+        ui.onB.setDisabled(True)
         set_output()
         is_push_on_btn = 0
         ui.offB.setEnabled(True)
@@ -402,7 +405,6 @@ ui.eighthB.clicked.connect(on_eightB)
 ui.startB.clicked.connect(on_startB)
 ui.stbOnB.clicked.connect(on_stbOnB)
 ui.stbOffB.clicked.connect(on_stbOffB)
-
 
 
 ui.show()
