@@ -23,3 +23,11 @@ pip install pyqt5
 #### Windows
 
 Copy `main_desigh.ui`, `logo.png` and `R140_remote_control.exe` to your PC. Enjoy!
+
+#### Raspberry py
+
+You need install some python packets
+```bash
+sudo apt install python3-serial python3-pyqt5
+sudo apt install python3-pyqt5.qtserialport
+```
