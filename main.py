@@ -27,7 +27,7 @@ check_out_list = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0
 header = "AM1"
 is_push_on_btn = 0
 grey_button_style = "background-color : gray window"
-red_button_style = "background-color : red; border-color: black"
+red_button_style = "background-color : red; border-color: black; border: none"
 
 
 def set_output():
