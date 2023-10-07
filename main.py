@@ -26,6 +26,8 @@ all_out_off = "AM10000000000000000\r"
 check_out_list = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
 header = "AM1"
 is_push_on_btn = 0
+grey_button_style = "background-color : gray window"
+red_button_style = "background-color : red; border-color: black"
 
 
 def set_output():
@@ -35,22 +37,22 @@ def set_output():
 
 
 def set_all_buttons_off():
-    ui.onB.setStyleSheet("background-color : window")
-    ui.stbB.setStyleSheet("background-color : gray window")
-    ui.fanB.setStyleSheet("background-color : gray window")
-    ui.offB.setStyleSheet("background-color : gray window")
-    ui.firstB.setStyleSheet("background-color : gray window")
-    ui.secondB.setStyleSheet("background-color : gray window")
-    ui.thirdB.setStyleSheet("background-color : gray window")
-    ui.fourthB.setStyleSheet("background-color : gray window")
-    ui.fifthB.setStyleSheet("background-color : gray window")
-    ui.sixthB.setStyleSheet("background-color : gray window")
-    ui.seventhB.setStyleSheet("background-color : gray window")
-    ui.eighthB.setStyleSheet("background-color : gray window")
-    ui.stbOnB.setStyleSheet("background-color : gray window")
-    ui.stbOffB.setStyleSheet("background-color : gray window")
-    ui.OpenB.setStyleSheet("background-color : gray window")
-    ui.startB.setStyleSheet("background-color : gray window")
+    ui.onB.setStyleSheet(grey_button_style)
+    ui.stbB.setStyleSheet(grey_button_style)
+    ui.fanB.setStyleSheet(grey_button_style)
+    ui.offB.setStyleSheet(grey_button_style)
+    ui.firstB.setStyleSheet(grey_button_style)
+    ui.secondB.setStyleSheet(grey_button_style)
+    ui.thirdB.setStyleSheet(grey_button_style)
+    ui.fourthB.setStyleSheet(grey_button_style)
+    ui.fifthB.setStyleSheet(grey_button_style)
+    ui.sixthB.setStyleSheet(grey_button_style)
+    ui.seventhB.setStyleSheet(grey_button_style)
+    ui.eighthB.setStyleSheet(grey_button_style)
+    ui.stbOnB.setStyleSheet(grey_button_style)
+    ui.stbOffB.setStyleSheet(grey_button_style)
+    ui.OpenB.setStyleSheet(grey_button_style)
+    ui.startB.setStyleSheet(grey_button_style)
     for k in range(len(check_out_list)):
         check_out_list[k] = '0'
 
@@ -95,10 +97,10 @@ def on_off():
         serial.write(all_out_off.encode())
         serial.waitForBytesWritten(10)
         set_all_buttons_off()
-        ui.fanB.setStyleSheet("background-color : gray window")
-        ui.stbB.setStyleSheet("background-color : gray window")
-        ui.onB.setStyleSheet("background-color : gray window")
-        ui.offB.setStyleSheet("background-color : gray window")
+        ui.fanB.setStyleSheet(grey_button_style)
+        ui.stbB.setStyleSheet(grey_button_style)
+        ui.onB.setStyleSheet(grey_button_style)
+        ui.offB.setStyleSheet(grey_button_style)
         ui.onB.setDisabled(True)
     else:
         show_warning_messagebox()
@@ -110,10 +112,10 @@ def on_fan():
         check_out_list[8] = "1"
         check_out_list[9] = "0"
         check_out_list[10] = "0"
-        ui.fanB.setStyleSheet("background-color : red")
-        ui.stbB.setStyleSheet("background-color : gray window")
-        ui.onB.setStyleSheet("background-color : gray window")
-        ui.offB.setStyleSheet("background-color : gray window")
+        ui.fanB.setStyleSheet(red_button_style)
+        ui.stbB.setStyleSheet(grey_button_style)
+        ui.onB.setStyleSheet(grey_button_style)
+        ui.offB.setStyleSheet(grey_button_style)
         ui.stbB.setEnabled(True)
         ui.onB.setDisabled(True)
         set_output()
@@ -135,10 +137,10 @@ def on_stb():
         check_out_list[8] = "0"
         check_out_list[9] = "1"
         check_out_list[10] = "0"
-        ui.stbB.setStyleSheet("background-color : red")
-        ui.onB.setStyleSheet("background-color : gray window")
-        ui.fanB.setStyleSheet("background-color : gray window")
-        ui.offB.setStyleSheet("background-color : gray window")
+        ui.stbB.setStyleSheet(red_button_style)
+        ui.onB.setStyleSheet(grey_button_style)
+        ui.fanB.setStyleSheet(grey_button_style)
+        ui.offB.setStyleSheet(grey_button_style)
         set_output()
         if is_push_on_btn == 0:
             timer.singleShot(TIME_INTERVAL, set_on_enabled)
@@ -158,10 +160,10 @@ def on_on():
         check_out_list[8] = "0"
         check_out_list[9] = "0"
         check_out_list[10] = "1"
-        ui.onB.setStyleSheet("background-color : red")
-        ui.stbB.setStyleSheet("background-color : gray window")
-        ui.fanB.setStyleSheet("background-color : gray window")
-        ui.offB.setStyleSheet("background-color : gray window")
+        ui.onB.setStyleSheet(red_button_style)
+        ui.stbB.setStyleSheet(grey_button_style)
+        ui.fanB.setStyleSheet(grey_button_style)
+        ui.offB.setStyleSheet(grey_button_style)
         set_output()
         is_push_on_btn = 1
         ui.fanB.setDisabled(True)
@@ -179,14 +181,14 @@ def on_firstB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : red")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(red_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -202,14 +204,14 @@ def on_secondB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : gray window")
-        ui.secondB.setStyleSheet("background-color : red")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(red_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -224,14 +226,14 @@ def on_thirdB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : gray window")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : red")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(red_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -246,14 +248,14 @@ def on_fourthB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : gray window")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : red")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(red_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -269,14 +271,14 @@ def on_fifthB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : gray window")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : red")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(red_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -292,14 +294,14 @@ def on_sixthB():
         check_out_list[5] = "1"
         check_out_list[6] = "0"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : gray window")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : red")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(red_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -315,14 +317,14 @@ def on_seventhB():
         check_out_list[5] = "0"
         check_out_list[6] = "1"
         check_out_list[7] = "0"
-        ui.firstB.setStyleSheet("background-color : gray window")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : red")
-        ui.eighthB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(red_button_style)
+        ui.eighthB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -338,21 +340,21 @@ def on_eightB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "1"
-        ui.firstB.setStyleSheet("background-color : gray window, border: none")
-        ui.secondB.setStyleSheet("background-color : gray window")
-        ui.thirdB.setStyleSheet("background-color : gray window")
-        ui.fourthB.setStyleSheet("background-color : gray window")
-        ui.fifthB.setStyleSheet("background-color : gray window")
-        ui.sixthB.setStyleSheet("background-color : gray window")
-        ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : red; border: none")
+        ui.firstB.setStyleSheet(grey_button_style)
+        ui.secondB.setStyleSheet(grey_button_style)
+        ui.thirdB.setStyleSheet(grey_button_style)
+        ui.fourthB.setStyleSheet(grey_button_style)
+        ui.fifthB.setStyleSheet(grey_button_style)
+        ui.sixthB.setStyleSheet(grey_button_style)
+        ui.seventhB.setStyleSheet(grey_button_style)
+        ui.eighthB.setStyleSheet(red_button_style)
         set_output()
     else:
         show_warning_messagebox()
 
 
 def reset_start():
-    ui.startB.setStyleSheet("background-color : gray window")
+    ui.startB.setStyleSheet(grey_button_style)
     check_out_list[12] = "0"
     set_output()
 
@@ -360,7 +362,7 @@ def reset_start():
 def on_startB():
     if serial.isOpen():
         check_out_list[12] = "1"
-        ui.startB.setStyleSheet("background-color : red")
+        ui.startB.setStyleSheet(red_button_style)
         set_output()
         timer.singleShot(800, reset_start)
     else:
@@ -370,7 +372,7 @@ def on_startB():
 def on_stbOnB():
     if serial.isOpen():
         check_out_list[11] = "1"
-        ui.stbOnB.setStyleSheet("background-color : red")
+        ui.stbOnB.setStyleSheet(red_button_style)
         set_output()
     else:
         show_warning_messagebox()
@@ -379,7 +381,7 @@ def on_stbOnB():
 def on_stbOffB():
     if serial.isOpen():
         check_out_list[11] = "0"
-        ui.stbOnB.setStyleSheet("background-color : gray window")
+        ui.stbOnB.setStyleSheet(grey_button_style)
         set_output()
     else:
         show_warning_messagebox()
