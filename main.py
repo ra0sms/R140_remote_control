@@ -338,14 +338,14 @@ def on_eightB():
         check_out_list[5] = "0"
         check_out_list[6] = "0"
         check_out_list[7] = "1"
-        ui.firstB.setStyleSheet("background-color : gray window")
+        ui.firstB.setStyleSheet("background-color : gray window, border: none")
         ui.secondB.setStyleSheet("background-color : gray window")
         ui.thirdB.setStyleSheet("background-color : gray window")
         ui.fourthB.setStyleSheet("background-color : gray window")
         ui.fifthB.setStyleSheet("background-color : gray window")
         ui.sixthB.setStyleSheet("background-color : gray window")
         ui.seventhB.setStyleSheet("background-color : gray window")
-        ui.eighthB.setStyleSheet("background-color : red")
+        ui.eighthB.setStyleSheet("background-color : red; border: none")
         set_output()
     else:
         show_warning_messagebox()
