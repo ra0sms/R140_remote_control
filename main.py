@@ -141,6 +141,7 @@ def on_stb():
         ui.onB.setStyleSheet(grey_button_style)
         ui.fanB.setStyleSheet(grey_button_style)
         ui.offB.setStyleSheet(grey_button_style)
+        ui.OpenB.setEnabled(True)
         set_output()
         if is_push_on_btn == 0:
             timer.singleShot(TIME_INTERVAL, set_on_enabled)
@@ -164,6 +165,7 @@ def on_on():
         ui.stbB.setStyleSheet(grey_button_style)
         ui.fanB.setStyleSheet(grey_button_style)
         ui.offB.setStyleSheet(grey_button_style)
+        ui.OpenB.setDisabled(True)
         set_output()
         is_push_on_btn = 1
         ui.fanB.setDisabled(True)
