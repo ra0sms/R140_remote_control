@@ -11,6 +11,9 @@ sudo apt install git pip python
 pip install pyqt5
 sudo usermod -a -G tty $USER
 sudo usermod -a -G dialout $USER
+```
+Here you need to reboot your system.
+```
 cd ~
 git clone https://github.com/ra0sms/R140_remote_control.git
 cd R140_remote_control
@@ -29,4 +32,5 @@ sudo apt install python3-serial python3-pyqt5
 sudo apt install python3-pyqt5.qtserialport
 sudo usermod -a -G tty pi
 sudo usermod -a -G dialout pi
+sudo reboot
 ```
