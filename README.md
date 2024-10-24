@@ -20,7 +20,7 @@ cd R140_remote_control
 python ./main.py
 ```
 
-#### Windows
+#### Windows (10 or later)
 
 Copy `main_desigh.ui`, `logo.png` and `R140_remote_control.exe` to your PC. Enjoy!
 
